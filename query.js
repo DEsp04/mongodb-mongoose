@@ -18,10 +18,10 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 // }
 
 // //deleteUser
-const deleteUser = async () => {
-  const users = await User.deleteOne({ name: "Claire", age: 28, status: "active" });
-  console.log("Delete Claire:", users)
-}
+// const deleteUser = async () => {
+//   const users = await User.deleteOne({ name: "Claire", age: 28, status: "active" });
+//   console.log("Delete Claire:", users)
+// }
 
 // //updateUser
 // const updateUser = async () => {
@@ -44,8 +44,8 @@ const deleteUser = async () => {
 const run = async () => {
   // await findAll();
   // await createUser();
-  await deleteUser();
-  // await updateUser();
+  // await deleteUser();
+  await updateUser();
   // await findAllOlderThan25();
   // await findAllActiveLessThan25();
 
