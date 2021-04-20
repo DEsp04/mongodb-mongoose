@@ -29,11 +29,11 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 //   console.log("update David Eski:", users)
 // }
 
-// //findAllOlderThan25
-// const findAllOlderThan25 = async () => {
-//   const OlderThan25 = await User.find({ age: { $gt: 25 } });
-//   console.log(" OlderThan25:",  OlderThan25)
-// }
+//findAllOlderThan25
+const findAllOlderThan25 = async () => {
+  const OlderThan25 = await User.find({ age: { $gt: 25 } });
+  console.log(" OlderThan25:",  OlderThan25)
+}
 // //active and less then 25
 // const findAllActiveLessThan25 = async () => {
 //   const lessThan25 = await User.find({ status: "acitve", age: { $lt: 25 } });
@@ -45,8 +45,8 @@ const run = async () => {
   // await findAll();
   // await createUser();
   // await deleteUser();
-  await updateUser();
-  // await findAllOlderThan25();
+  // await updateUser();
+  await findAllOlderThan25();
   // await findAllActiveLessThan25();
 
   process.exit()  
