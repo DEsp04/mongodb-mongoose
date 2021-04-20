@@ -9,16 +9,13 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const findAll = async () => {
   const users = await User.find();
   console.log("All users:", users)
-
-  const insertUser = await User.insertOne({ name: "David", age: 33, status: "active" });
-  console.log("Add David:", insertUser)
 }
 
-//createUser
-// const createUser = async () => {
-//   const users = await User.insertOne({ name: "David", age: 33, status: "active" });
-//   console.log("Add David:", users)
-// }
+// createUser
+const createUser = async () => {
+  const users = await User.insertMany({ name: "David", age: 33, status: "active" });
+  console.log("Add David:", users)
+}
 
 // //deleteUser
 // const deleteUser = async () => {
@@ -46,7 +43,7 @@ const findAll = async () => {
 
 const run = async () => {
   await findAll();
-  // await createUser();
+  await createUser();
   // await deleteUser();
   // await updateUser();
   // await findAllOlderThan25();
